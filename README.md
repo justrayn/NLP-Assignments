@@ -1,2 +1,2 @@
 # NLP-Assignments
-this repo is for NLP assignment
+this repo is for NLP assignments
