@@ -52,7 +52,7 @@ if user_ceb_input := st.chat_input("Isulat ang imong pangutana dinhi (e.g., Unsa
         with st.status("Nagproseso sa imong pangutana (Processing)...", expanded=True) as status:
             
             # Step A: Translate Cebuano Input -> English
-            status.write("🔄 Naghubad sa English (Gemma 4)...")
+            status.write("🔄 Gihimog English gikan Cebuano(Gemma 4)...")
             english_query = translate_ceb_to_eng(user_ceb_input)
             
             # Step B: Get Clinical Insight -> MedGemma:4b
@@ -60,7 +60,7 @@ if user_ceb_input := st.chat_input("Isulat ang imong pangutana dinhi (e.g., Unsa
             english_medical_reply = get_medical_response(english_query)
             
             # Step C: Translate English Reply -> Cebuano Output
-            status.write("🔄 Naghubad og balik sa Cebuano (Gemma 4)...")
+            status.write("🔄 Gihimo balik sa Cebuano (Gemma 4)...")
             cebuano_final_reply = translate_eng_to_ceb(english_medical_reply)
             
             status.update(label="Nahuman na! (Complete)", state="complete", expanded=False)
